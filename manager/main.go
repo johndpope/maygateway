@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"micro-gateway/manager/controllers"
 	"micro-gateway/manager/db"
@@ -14,6 +15,7 @@ func main() {
 	router := gin.New()
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
+	router.Use(cors.Default())
 
 	v1 := router.Group("v1")
 	{
