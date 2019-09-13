@@ -18,9 +18,9 @@ const List = styled.div`
   padding: 0 15px;
 
   .selected {
-    background: #304ec2;
+    background: #304ec2 !important;
     color: #fff;
-    border-radius: 10px;
+    
 
     svg {
       color: #fff;
@@ -35,10 +35,15 @@ const ListItem = styled(NavLink)`
   color: #79797d;
   display: block;
   text-decoration: none;
+  border-radius: 10px;
 
   svg {
     margin-right: 10px;
     color: #98979c;
+  }
+
+  &:hover {
+    background: #e6e6e6;
   }
 `
 
