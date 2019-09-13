@@ -21,6 +21,10 @@ func main() {
 		{
 			apiController := new(controllers.ApiController)
 			apisGroup.POST("/", apiController.Save)
+			apisGroup.GET("/", apiController.GetAll)
+			apisGroup.GET("/:id", apiController.GetOne)
+			apisGroup.PUT("/:id", apiController.Update)
+			apisGroup.DELETE("/:id", apiController.Delete)
 		}
 	}
 
